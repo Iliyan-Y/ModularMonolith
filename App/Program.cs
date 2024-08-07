@@ -1,7 +1,7 @@
+using ModularMono.App.User.Api;
+
 var builder = WebApplication.CreateBuilder(args);
 
-var app = builder.Build();
+var userModule = new UserApi(builder);
 
-if (app.Environment.IsDevelopment()) { }
-
-app.Run();
+userModule.RunUserHost();
