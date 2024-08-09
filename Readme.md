@@ -1,10 +1,10 @@
 # Example modular monolith architecture with .net C#
 
-- the idea is to combine multiple solution in one deployable package. Each module follow S.O.L.I.D. principles and Clean Architecture
+- The idea is to combine multiple solution in one deployable package. Each module follow S.O.L.I.D. principles and Clean Architecture
 
 # Structure
 
-- The App is the wrapper that will include and run all modules
+- The App is the host wrapper that will include and run all modules
 - A module (for example User) is:
   - Self enclosed application which can run on its own.
   - If required it can be extracted in microservice, and hosted separately.
@@ -21,5 +21,3 @@
 ```
 dotnet run --project App
 ```
-
-## Notes for recreating project structure
