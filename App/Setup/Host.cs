@@ -1,10 +1,10 @@
 using Serilog;
 
-namespace ModularMono.App.User.Api;
+namespace ModularMono.App;
 
-internal static class UserStartupHost
+internal static class StartupHost
 {
-  public static void AddUserHost(this WebApplicationBuilder builder)
+  public static void AddHost(this WebApplicationBuilder builder)
   {
     var logConfig = new LoggerConfiguration()
       .WriteTo.Console()
@@ -22,17 +22,17 @@ internal static class UserStartupHost
     builder.Host.UseSerilog();
   }
 
-  public static void RunUserHost(this WebApplication app)
+  public static void RunHost(this WebApplication app)
   {
     try
     {
-      Log.Information("Starting User API");
+      Log.Information("Starting API");
       app.UseSerilogRequestLogging();
       app.Run();
     }
     catch (Exception ex)
     {
-      Log.Fatal(ex, "User API terminated unexpectedly");
+      Log.Fatal(ex, " API terminated unexpectedly");
     }
     finally
     {

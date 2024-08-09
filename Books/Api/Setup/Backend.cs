@@ -1,11 +1,11 @@
 // using Microsoft.EntityFrameworkCore;
 using Serilog;
 
-namespace ModularMono.App.User.Api;
+namespace ModularMono.App.Books.Api;
 
 public static class SetupBackend
 {
-  public static void AddUserBackend(this WebApplicationBuilder builder)
+  public static void AddBooksBackend(this WebApplicationBuilder builder)
   {
 
     builder.Services.AddControllers().AddJsonOptions(options =>
@@ -37,7 +37,7 @@ public static class SetupBackend
     throw new InvalidOperationException(error);
   }
 
-  public static void UseUserBackend(this WebApplication app)
+  public static void UseBooksBackend(this WebApplication app)
   {
     app.MapControllers();
   }

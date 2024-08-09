@@ -1,12 +1,12 @@
 using System.Reflection;
 using Serilog;
 
-namespace ModularMono.App.User.Api;
+namespace ModularMono.App;
 
 internal static class ApiExplorer
 {
 
-  public static void AddUserApiExplorer(this WebApplicationBuilder builder)
+  public static void AddApiExplorer(this WebApplicationBuilder builder)
   {
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen(options =>
@@ -21,7 +21,7 @@ internal static class ApiExplorer
     });
   }
 
-  public static void UseUserApiExplorer(this WebApplication app)
+  public static void UseApiExplorer(this WebApplication app)
   {
     if (app.Environment.IsDevelopment())
     {

@@ -13,3 +13,13 @@
   - Must be loosely coupled with other modules using **ONLY** the exposed apis if data transfer is required.
   - Can Follow different patterns and architecture - e.g. Mediator pattern, SOLID principles, CLEAN architecture
 - at this stage I am not sure if each module will also include separate UI
+
+# Setup and requirements
+
+- .net 8
+
+```
+dotnet run --project App
+```
+
+## Notes for recreating project structure

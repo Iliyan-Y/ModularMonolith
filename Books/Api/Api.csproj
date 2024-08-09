@@ -13,9 +13,4 @@
     <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\User\Api\Api.csproj" />
-    <ProjectReference Include="..\Books\Api\Api.csproj" />
-  </ItemGroup>
-
 </Project>

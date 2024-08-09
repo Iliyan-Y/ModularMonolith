@@ -1,7 +1,20 @@
+using ModularMono.App;
+using ModularMono.App.Books.Api;
 using ModularMono.App.User.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var userModule = new UserApi(builder);
+builder.AddApiExplorer();
+builder.AddHost();
+builder.AddUserBackend();
+builder.AddBooksBackend();
 
-userModule.RunUserHost();
+var app = builder.Build();
+
+app.UseUserBackend();
+app.UseBooksBackend();
+app.UseApiExplorer();
+
+app.RunHost();
+
+
