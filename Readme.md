@@ -21,3 +21,7 @@
 ```
 dotnet run --project App
 ```
+
+# Diagram
+
+![Diagram](./SolutionDiagram.png)
